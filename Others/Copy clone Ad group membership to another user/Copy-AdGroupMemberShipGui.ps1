@@ -144,7 +144,7 @@ $buttonLoadFromTxt.Add_Click({
         $Global:fileContents = Get-Content -Path $fileName 
         $listOfUsers = $fileContents | ForEach-Object {"`r`n$_"}
         #$textBoxDestinationUsersList.Text = $null
-        $textBoxDestinationUsersList.Text = $listOfUsers[0..$listOfUsers.Length]
+        $textBoxDestinationUsersList.Text = $listOfUsers
         $buttonVerifyUserList.IsEnabled = $true
         $textBoxLogs.Text = "{0}`nSelected file name '{1}'" -f $textBoxLogs.Text, $fileName
     }
